@@ -1,25 +1,31 @@
 function Home() {
-  <main className="home">
-    <section className="home__greeting">
-      <h1 className="home__greeting__message">
-        Welcome back, <span className="home__username">sanjevanr_</span>. Here's what your friends have been playing recently...
-      </h1>
-    </section>
+  const friendPlays = [1, 2, 3, 4, 5, 6];
+  return (
+    <main className="home">
+      <section className="home__greeting">
+        <h1 className="home__greeting__message">
+          Welcome back, <span className="home__username">sanjevanr_</span>.
+          Here's what your friends have been playing recently...
+        </h1>
+      </section>
 
-    <section className="home__section"> 
-      <div className="home__section__header">
-        <h2 className="home__section__title">New from Friends</h2>
-      </div>
-
-      <div className="home__grid">
-        <div key={item} className="game_cover">
-          <div className="game_cover__image"></div>
-          <div className="game_cover__user"></div>
-          <div className="game_cover__rating"></div>
+      <section className="home__section">
+        <div className="home__section__header">
+          <h2 className="home__section__title">New from Friends</h2>
         </div>
-      </div>
-    </section>
-  </main>
+
+        <div className="home__grid">
+          {friendPlays.map((item) => (
+            <div key={item} className="game_cover">
+              <div className="game_cover__image"></div>
+              <div className="game_cover__user">vingdao_</div>
+              <div className="game_cover__rating">★★★½</div>
+            </div>
+          ))}
+        </div>
+      </section>
+    </main>
+  );
 }
 
 export default Home;
