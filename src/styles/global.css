@@ -3,12 +3,11 @@
   --colour-surface: #13181b;
   --colour-border: #2c3440;
   --colour-hover-nav-bar: #f5f6f7;
-  
   --colour-text: #ffffff;
   --colour-text-muted: #99aabb;
-  --colour-accent-green: #00e054;
-  --colour-accent-blue: #40bcf4;
-  --colour-accent-orange: #ff8000;
+  --colour-accent-cyan: #1ac2ec;
+  --colour-accent-green: #3bfa1e;
+  --colour-accent-pink: #ed0ffd;
 }
 
 body {
@@ -45,26 +44,26 @@ body {
 }
 
 .dot {
-  width: 14px;
-  height: 14px;
+  width: 24px;
+  height: 24px;
   border-radius: 50%;
-  margin-right: -3px;
+  margin-right: -5px
 }
 
-.dot--orange {
-  background-color: var(--colour-accent-orange);
+.dot--cyan {
+  background-color: var(--colour-accent-cyan);
 }
 
 .dot--green {
   background-color: var(--colour-accent-green);
 }
 
-.dot--blue {
-  background-color: var(--colour-accent-blue);
+.dot--pink {
+  background-color: var(--colour-accent-pink);
 }
 
 .brand-text {
-  color: var(--colour-brand);
+  color: var(--colour-text);
   font-size: 2rem;
   font-weight: 700;
 }
