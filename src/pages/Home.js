@@ -1,7 +1,14 @@
 import "../styles/home.css";
 
 function Home() {
-  const friendPlays = [1, 2, 3, 4, 5, 6];
+  const friendPlays = [
+    { id: 1, username: "vingdao_", rating: "★★★½" },
+    { id: 2, username: "crank17_", rating: "★★★★" },
+    { id: 3, username: "samuel", rating: "★★½" },
+    { id: 4, username: "rh1176", rating: "★★★" },
+    { id: 5, username: "sehajkaur", rating: "★★★★★" },
+    { id: 6, username: "quang_ak47", rating: "★★★½" },
+  ];
   const popularAmongFriends = [1, 2, 3, 4, 5, 6];
   return (
     <main className="home">
@@ -18,11 +25,11 @@ function Home() {
         </div>
 
         <div className="home__grid">
-          {friendPlays.map((item) => (
-            <div key={item} className="game__cover">
+          {friendPlays.map((play) => (
+            <div key={play.id} className="game__cover">
               <div className="game__cover__image"></div>
-              <div className="game__cover__user">vingdao_</div>
-              <div className="game__cover__rating">★★★½</div>
+              <div className="game__cover__user">{play.username}</div>
+              <div className="game__cover__rating">{play.rating}</div>
             </div>
           ))}
         </div>
