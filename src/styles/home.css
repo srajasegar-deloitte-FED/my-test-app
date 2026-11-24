@@ -1,0 +1,75 @@
+.home {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px 0;
+}
+
+.home__greeting__message {
+  margin: 0;
+  font-size: 28px;
+  padding-bottom: 32px;
+  color: var(--colour-text-muted);
+}
+
+.home__username {
+  color: var(--colour-text-username);
+  text-decoration: underline;
+}
+
+.home__section__header {
+  border-bottom: 1px solid var(--colour-border-secondary);
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+}
+
+.home__section__title {
+  margin: 0;
+  font-size: 14px;
+  color: var(--colour-text-muted);
+}
+
+.home__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.game__cover {
+  display: flex;
+  flex-direction: column;
+}
+
+.game__cover__image {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  background-color: #99aabb;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.game__cover__user {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--colour-text-muted);
+}
+
+.game__cover__rating {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--colour-text-muted);
+}
+
+.home__ad {
+  margin: 32px 0 20px;
+}
+
+.ad__banner {
+  width: 100%;
+  height: 96px;
+  background-color: #ffc676;
+  border-radius: 1px;
+  display: flex;
+  align-items: center;
+  padding: 0 24px;
+  box-sizing: border-box;
+}
