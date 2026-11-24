@@ -1,15 +1,29 @@
 import "../styles/home.css";
+import advertisement from "../assets/images/advertisement.webp";
+import botw from "../assets/images/botw.webp";
+import gta6 from "../assets/images/gta-6.webp";
+import residentEvil from "../assets/images/resident_evil.webp";
+import spiderman2 from "../assets/images/spiderman_2.webp";
+import wolverine from "../assets/images/wolverine.webp";
+import zelda from "../assets/images/zelda.webp";
 
 function Home() {
   const friendPlays = [
-    { id: 1, username: "vingdao_", rating: "★★★½" },
-    { id: 2, username: "crank17_", rating: "★★★★" },
-    { id: 3, username: "samuel", rating: "★★½" },
-    { id: 4, username: "rh1176", rating: "★★★" },
-    { id: 5, username: "sehajkaur", rating: "★★★★★" },
-    { id: 6, username: "quang_ak47", rating: "★★★½" },
+    { id: 1, username: "vingdao_", rating: "★★★★½", image: zelda },
+    { id: 2, username: "crank17_", rating: "★★★★", image: gta6 },
+    { id: 3, username: "samuel", rating: "★★★½", image: residentEvil },
+    { id: 4, username: "rh1176", rating: "★★★★★", image: gta6 },
+    { id: 5, username: "sehajkaur", rating: "★★★", image: wolverine },
+    { id: 6, username: "quang_ak47", rating: "★★★★★", image: zelda },
   ];
-  const popularAmongFriends = [1, 2, 3, 4, 5, 6];
+  const popularAmongFriends = [
+    { id: 1, image: zelda },
+    { id: 2, image: spiderman2 },
+    { id: 3, image: residentEvil },
+    { id: 4, image: gta6 },
+    { id: 5, image: botw },
+    { id: 6, image: wolverine },
+  ];
   return (
     <main className="home">
       <section className="home__greeting">
@@ -27,7 +41,11 @@ function Home() {
         <div className="home__grid">
           {friendPlays.map((play) => (
             <div key={play.id} className="game__cover">
-              <div className="game__cover__image"></div>
+              <img
+                className="game__cover__image"
+                src={play.image}
+                alt={play.username}
+              />
               <div className="game__cover__user">{play.username}</div>
               <div className="game__cover__rating">{play.rating}</div>
             </div>
@@ -36,7 +54,11 @@ function Home() {
       </section>
 
       <section className="home__ad">
-        <div className="ad__banner"></div>
+        <img
+          className="ad__banner"
+          src={advertisement}
+          alt="Advertisement"
+        />
       </section>
 
       <section className="popular__section">
@@ -46,9 +68,11 @@ function Home() {
 
         <div className="home__grid">
           {popularAmongFriends.map((item) => (
-            <div key={item} className="game__cover">
-              <div className="game__cover__image"></div>
-            </div>
+              <img
+                className="game__cover__image"
+                src={item.image}
+                alt="Popular game"
+              />
           ))}
         </div>
       </section>
