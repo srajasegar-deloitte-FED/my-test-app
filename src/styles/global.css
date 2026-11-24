@@ -1,10 +1,12 @@
 :root {
   --colour-bg: #161a20;
   --colour-surface: #13181b;
-  --colour-border: #2c3440;
+  --colour-border: #13181b;
+  --colour-border-secondary: #3f4a5b;
   --colour-hover-nav-bar: #f5f6f7;
   --colour-text: #ffffff;
   --colour-text-muted: #99aabb;
+  --colour-text-username: #007bff;
   --colour-accent-cyan: #1ac2ec;
   --colour-accent-green: #3bfa1e;
   --colour-accent-pink: #ed0ffd;
@@ -14,7 +16,7 @@ body {
   margin: 0;
   background-color: var(--colour-bg);
   color: var(--colour-text);
-  font-family: Arial, sans-serif;
+  font-family: "Calibri", "Segoe UI", "Helvetica Neue", sans-serif;
 }
 
 .navbar {
@@ -47,7 +49,7 @@ body {
   width: 24px;
   height: 24px;
   border-radius: 50%;
-  margin-right: -5px
+  margin-right: -5px;
 }
 
 .dot--cyan {
@@ -89,3 +91,65 @@ body {
 .navbar__link:hover {
   color: var(--colour-hover-nav-bar);
 }
+
+.home {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 32px 24px 0;
+}
+
+.home__greeting__message {
+  margin: 0;
+  font-size: 28px;
+  padding-bottom: 32px;
+  color: var(--colour-text-muted);
+}
+
+.home__username {
+  color: var(--colour-text-username);
+  text-decoration: underline;
+}
+
+.home__section__header {
+  border-bottom: 1px solid var(--colour-border-secondary);
+  margin-bottom: 10px;
+  padding-bottom: 6px;
+}
+
+.home__section__title {
+  margin: 0;
+  font-size: 14px;
+  color: var(--colour-text-muted);
+}
+
+.home__grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 16px;
+}
+
+.game__cover {
+  display: flex;
+  flex-direction: column;
+}
+
+.game__cover__image {
+  width: 100%;
+  aspect-ratio: 2 / 3;
+  background-color: #99aabb;
+  border-radius: 6px;
+  margin-bottom: 8px;
+}
+
+.game__cover__user {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--colour-text-muted);
+}
+
+.game__cover__rating {
+  font-size: 16px;
+  font-weight: 500;
+  color: var(--colour-text-muted);
+}
+
