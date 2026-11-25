@@ -14,10 +14,22 @@ function Profile() {
         </div>
 
         <div className="profile__stats">
-          <div className="profile__stat">Games</div>
-          <div className="profile__stat">This Year</div>
-          <div className="profile__stat">Following</div>
-          <div className="profile__stat">Followers</div>
+          <div className="profile__stat">
+            <span className="profile__stat-value">250</span>
+            <span className="profile__stat__label">Games</span>
+          </div>
+          <div className="profile__stat">
+            <span className="profile__stat-value">77</span>
+            <span className="profile__stat-label">This Year</span>
+          </div>
+          <div className="profile__stat">
+            <span className="profile__stat-value">20</span>
+            <span className="profile__stat-label">Following</span>
+          </div>
+          <div className="profile__stat">
+            <span className="profile__stat-value">19</span>
+            <span className="profile__stat-label">Followers</span>
+          </div>
         </div>
       </section>
 
